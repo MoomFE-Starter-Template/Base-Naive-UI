@@ -38,4 +38,5 @@
 name: Index
 meta:
   layout: home
+  title: 首页
 </route>

@@ -15,7 +15,6 @@
   import { useLoadingBar } from 'naive-ui';
   import { isBrowser } from '@moomfe/small-utils';
   import { app } from '@/shared/env';
-  import { settings } from '@/settings';
 
   /** 主题相关 */
   const { theme, themeOverrides, zhCN, dateZhCN } = useNaiveTheme();
@@ -24,8 +23,4 @@
   function GetAppEnv() {
     app.loadingBar = useLoadingBar();
   }
-
-  useHead({
-    title: settings.title,
-  });
 </script>
