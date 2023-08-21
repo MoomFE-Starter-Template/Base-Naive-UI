@@ -112,7 +112,7 @@
 ### `name` ( `string` ) ( 必填 )
 
 > - 项目名称
-> - 默认值: `'NaiveUI Admin'`
+> - 默认值: `'Base - Naive UI'`
 
 ### `titleTemplate` ( `string` )
 
