@@ -14,7 +14,11 @@
 <script lang="ts" setup>
   import { useLoadingBar } from 'naive-ui';
   import { isBrowser } from '@moomfe/small-utils';
+  import { settings } from '@/settings';
   import { app } from '@/shared/env';
+
+  const route = useRoute();
+  const { t } = useI18n();
 
   /** 主题相关 */
   const { theme, themeOverrides, zhCN, dateZhCN } = useNaiveTheme();
@@ -22,5 +26,15 @@
   /** 获取当前应用的一些环境变量 */
   function GetAppEnv() {
     app.loadingBar = useLoadingBar();
+  }
+
+  // 设置页面标题
+  {
+    const meta = route.meta || {};
+    const titleTemplate = (meta.titleTemplate ?? settings.titleTemplate ?? `:title | ${settings.name}`) as string;
+
+    useHead({
+      title: titleTemplate.replaceAll(':title', t(`${meta.title ?? ''}`)),
+    });
   }
 </script>
