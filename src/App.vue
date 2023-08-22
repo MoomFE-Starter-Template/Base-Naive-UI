@@ -17,9 +17,6 @@
   import { settings } from '@/settings';
   import { app } from '@/shared/env';
 
-  const route = useRoute();
-  const { t } = useI18n();
-
   /** 主题相关 */
   const { theme, themeOverrides, zhCN, dateZhCN } = useNaiveTheme();
 
@@ -28,13 +25,7 @@
     app.loadingBar = useLoadingBar();
   }
 
-  // 设置页面标题
-  {
-    const meta = route.meta || {};
-    const titleTemplate = (meta.titleTemplate ?? settings.titleTemplate ?? `:title | ${settings.name}`) as string;
-
-    useHead({
-      title: titleTemplate.replaceAll(':title', t(`${meta.title ?? ''}`)),
-    });
-  }
+  useHead({
+    title: settings.name,
+  });
 </script>
