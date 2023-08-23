@@ -15,7 +15,7 @@ import Layouts from 'vite-plugin-vue-layouts';
 import generateSitemap from 'vite-ssg-sitemap';
 import Inspect from 'vite-plugin-inspect';
 import { SmallUtilsComponentsResolver } from '@moomfe/small-utils/vite-config';
-import { MixteUseAutoImport } from '@mixte/use/dist/register';
+import { MixteUseAutoImport } from '@mixte/use/register';
 import { setup } from '@css-render/vue3-ssr';
 import { JSDOM } from 'jsdom';
 
