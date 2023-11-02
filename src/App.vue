@@ -13,7 +13,7 @@
 
 <script lang="ts" setup>
   import { useLoadingBar } from 'naive-ui';
-  import { isBrowser } from '@moomfe/small-utils';
+  import { isBrowser } from 'mixte';
   import { settings } from '@/settings';
   import { app } from '@/shared/env';
 

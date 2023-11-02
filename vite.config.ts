@@ -14,7 +14,6 @@ import Pages from 'vite-plugin-pages';
 import Layouts from 'vite-plugin-vue-layouts';
 import generateSitemap from 'vite-ssg-sitemap';
 import Inspect from 'vite-plugin-inspect';
-import { SmallUtilsComponentsResolver } from '@moomfe/small-utils/vite-config';
 import { MixteUseAutoImport } from '@mixte/use/register';
 import { setup } from '@css-render/vue3-ssr';
 import { JSDOM } from 'jsdom';
@@ -70,8 +69,6 @@ export default defineConfig(({ mode }) => {
         resolvers: [
           // 自动导入图标组件
           IconsResolver({ prefix: 'i' }),
-          // 自动导入 @moomfe/small-utils 的组件
-          SmallUtilsComponentsResolver(),
           // 自动导入 Naive UI 组件
           NaiveUiResolver(),
         ],
